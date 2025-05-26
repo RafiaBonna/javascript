@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>object method</h4>
+    <script>
+// create an object
+const person ={
+    fisrtName:"Rafia" ,
+    lastName:"Hawlader",
+    id: 607,
+    fullName: function(){
+        return this.fisrtName+" "+this.lastName;
+    }
+}
+// function info (){
+//     return "this is function"
+// }
+// document.write(info());
+console.log(person.fullName ());
+
+
+
+// function fullName (){
+// return this.firstName+" "+person.lastName;
+// }
+// console.log(person.firstName +" "+person.lastName+" "+person.id);
+    </script>
+    <script>
+        const place ={
+            name:"Manpura",
+            upazila:"Bhola",
+            district:"Barishal",
+            fullDetails: function(){
+                return this.name+" "+this.district;
+            }
+
+        }
+        document.write(place.fullDetails());
+        console.log(place.fullDetails());
+    </script>
+</body>
+</html>

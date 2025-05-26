@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Object method</h3>
+    <script>
+        const car ={
+            carName:"TOYOTA",
+            carModel:575,
+            carWeight:"900kg",
+            carColor:"Gray",
+            // carStart:"Start Autometicly.",
+            // carDrive:"Drive so smoothely.",
+            // carBrake:" It has a super break.",
+            // carStop:"Stop instant with easy command.",
+            start: function(){
+                return this.carName+"="+ "Start Autometicly.";
+              
+            },
+            task: function(){
+               return this.carName+"="+ "Drive so smoothely."; 
+            },
+            basic: function(){
+                return this.carName+"="+ " It has a super break.";
+            },
+            stop: function(){
+                return  this.carName+"="+"Stop instant with easy command.";
+            }
+        
+        }
+        document.write(car.start());
+        document.write("<br>");
+        document.write(car.task());
+        document.write("<br>");
+        document.write(car.basic());
+        document.write("<br>");
+        document.write(car.stop());
+    </script> 
+</body>
+</html>
