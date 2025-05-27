@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Constructor function for person objects</h3>
+    <script>
+//         let person ={
+//             name: "Alam",
+//             age:26,
+//             eyeColor:"Blue",
+//             id:607,
+//         }
+// person={},
+// new object();
+
+        // constructor function for person objects
+        function client(a,b,c,d){
+            this.name= a;
+             this.age=b;
+           this.eyeColor=c;
+             this.id=d; 
+        }
+        const alam =new client("Alam",26,"Black",607);
+        const saheb =new client("Saheb",27,"Blue",608);
+
+        document.write(alam.name+" "+alam.age+" "+alam.eyeColor+" "+alam.id);
+        document.write("<br>");
+        document.write("<br>");
+        document.write(saheb.name+" "+saheb.age+" "+saheb.eyeColor+" "+saheb.id);
+console.log(alam);
+console.log(saheb);
+
+
+    </script> 
+</body>
+</html>
