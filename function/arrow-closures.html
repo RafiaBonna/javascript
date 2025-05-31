@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>A closure is a function that has access to the parent scope,after the parent function has closed</h1>
+    <h1>A global varibale is a "public" varioable defined outside afunction</h1>
+    <h1>A local variable is a"private" variable defined in function</h1>
+   <script>
+    // javascript local scope
+    document.write(step());
+  function step(){
+    let x = 70;
+    let y =50;
+        return x + y;
+    }
+    document.write("<br>");
+// global scope
+    let a = 50;
+    let b =40;
+    function newFunction(){
+        return a * b;
+    }
+    document.write(newFunction());
+    document.write("<br>");
+    function sub(){
+        return a-b;
+    }
+    document.write(sub());
+   </script> 
+</body>
+</html>
