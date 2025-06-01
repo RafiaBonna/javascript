@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>immediately invoked function expression(IIFE)</title>
+</head>
+<body>
+   <h1>Auto invoke Function/function as newspace</h1> 
+   <h2>(function(){}())</h2>
+   <h1>(() => {} ) ()</h1>
+   <script>
+    // an IIFE that returns the sum of the teo numbers
+        // syntax of IIFE Function
+    (function(){
+
+    })();
+            //  practice
+    (function(m,b){
+        console.log(m+b);
+    })(6,4);
+    
+                          //  arrow function
+
+    ((a,b,c) => {
+        console.log(a+b+c);
+    })(10,20,30);
+                         // regular function
+    (function(p,q,r){
+        document.write(p+q-r);
+        console.log(p+q-r);
+    })(50,50,30);
+   </script>
+</body>
+</html>
