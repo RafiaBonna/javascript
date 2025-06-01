@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <!-- <h1>A closure is a function that has access to the parent scope,after the parent function has closed</h1>
+    <h1>A closure is a function that has access to the parent scope,after the parent function has closed</h1>
     <h1>A global varibale is a "public" variable defined outside a function</h1>
     <h1>A local variable is a"private" variable defined inside a function</h1>
    <script>
-    // javascript local scope
+                     // javascript local scope
     document.write(step());
   function step(){
     let x = 70;
@@ -18,7 +18,7 @@
         return x + y;
     }
     document.write("<br>");
-// global scope
+                    // global scope
     let a = 50;
     let b =40;
     function newFunction(){
@@ -30,7 +30,8 @@
         return a-b;
     }
     document.write(sub());
-   </script>  -->
+    document.write("<br>");
+   </script> 
    <script>
     // local
      document.write(dew());
@@ -40,9 +41,14 @@
         return (m +b);
          
     }
-    // global scope
+    document.write("<br>");
+                         // global scope
     let r = 101;
-    let a = 99;
+    let s = 99;
+    function clover (){
+        return r+s;
+    }
+    document.write(clover());
    </script>
 </body>
 </html>
