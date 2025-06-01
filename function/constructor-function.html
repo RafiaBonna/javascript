@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Constructor VS regular Functions</h2>
+    <h4>constructors are intended for creating objects,<br> while regular functions perform specific tasks. </h4>
+    <script>
+        function client (name, age, nationality){
+            this.name =name;
+            this.age =age;
+            this. nationality =nationality;
+            this.data = function(){
+                document.write("Hello, My name is"+" "+this.name+" "+"i am "+this.age+"years old"+" "+"and"+" "+"my nationality is"+" "+this.nationality+".");
+                console.log("Hello, My name is"+" "+this.name+" "+"i am "+this.age+"years old"+" "+"and"+" "+"my nationality is"+" "+this.nationality+".");
+            };
+        }
+        let client1 = new client("Rafia",26,"Bangladeshi");
+        let client2 = new client("Annesha",26,"pakistani");
+        let client3 = new client("Nipa",26,"Indian");
+        client2.data();
+    </script>
+</body>
+</html>
