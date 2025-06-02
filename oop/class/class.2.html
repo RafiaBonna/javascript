@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Phone{
+          constructor(name,color,price){
+             this.name = name;
+            this.color = color;
+            this.price = price;
+          }
+          show(){
+            document.write( this.name +" " +this.color +" is available "+"it's price is "+this.price);
+          }
+        }
+        const newPhone = new Phone("Redmi 10","B&W color",28000);
+        const cell =new Phone("Redmi 11","B&W color",29000);
+      
+        newPhone.show();
+        document.write("<br>")
+        cell.show();
+       
+    </script>
+</body>
+</html>
