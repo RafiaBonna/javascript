@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inheritance/subclass</title>
+</head>
+<h1>Inheritance/Subclass</h1>
+<body>
+  <script>
+class refrigerator{
+    constructor(n,m,c,w){
+        this.brand=n;
+        this.model=m;
+        this.color=c;
+        this.warranty=w;
+    }
+    capability(){
+        document.write( "This "+this.brand+" "+"refrigerator is latest version");
+        document.write("<br>");
+        console.log("This "+this.brand+" "+"refrigerator is latest version");
+    }
+}
+let  refrigerator1 =new refrigerator("Singer","Double_Door","B&W","12 Years");
+let  refrigerator2 =new refrigerator("OLG","Glassy","Lavenderblush","15 years");
+refrigerator1.capability();
+refrigerator2.capability();
+console.log(refrigerator1);
+console.log(refrigerator2);
+
+class aircooler extends refrigerator{
+    constructor(n,m,c,w,weight,p){
+        super(n,m,c,w);
+        this.weight =weight;
+        this.price =p;
+    }
+    system(){
+        return "This is so resonable in price." ;
+        
+    }
+}
+let ac =new aircooler("Panasonic","CS/CU","off white","12 Years","5 Ton",56400);
+
+ac.system();
+document.write(ac.system());
+document.write("<br>");
+console.log(ac);
+console.log(ac.system());
+console.log(ac.capability());
+
+  </script>  
+
+</body>
+</html>
