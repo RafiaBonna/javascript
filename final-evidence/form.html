@@ -51,7 +51,7 @@
         Subject:
         <input type="checkbox" name="sub" value="Bengali">Bengali
         <input type="checkbox" name="sub" value="English">English
-        <input type="checkbox" name="sub" value="Bengali">Urdu
+        <input type="checkbox" name="sub" value="Urdu">Urdu
         <br><br>
         <input type="button" value="submit" onclick="x_window()" style="background-color: peru; font-weight: bold; color: black; border-radius: 5px;">
     </fieldset>
@@ -69,7 +69,7 @@
         var subject=[];
     
     for( let i=0; i<document.x.gend.length;i++){
-        if(document.x.gen[i].checked){
+        if(document.x.gend[i].checked){
             gender=document.x.gen[i].value;
         }
     }
@@ -87,7 +87,7 @@
         write("Email :"+email +"<br/>"+"<br/>");    
         write("Contact :"+contact+"<br/>"+"<br/>");    
         write("Address :"+address+"<br/>"+"<br/>"); 
-        write("Session :"+session +"<br/>"+"<br/>");    
+        write("Gender :" + gender + "<br/><br/>");   
         write("Session :"+session +"<br/>"+"<br/>");    
         write("Subjects :"+subject.join(",") +"<br/>"+"<br/>");
         write("<br/> <input type='button' value='close me' onclick='self.close();'/>"+"&nbsp");
