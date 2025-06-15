@@ -54,12 +54,30 @@
         <input type="checkbox" name="sub" value="Bengali">Urdu
         <br><br>
         <input type="button" value="submit" onclick="x_window()" style="background-color: peru; font-weight: bold; color: black; border-radius: 5px;">
-
-       
-
-
     </fieldset>
    </form>
    </div> 
+   <script>
+    function x_window(){
+        var title="Details";
+        var name=document.x.cname.value;
+        var email=document.x.email.value;
+        var contact=document.x.contact.value;
+        var address=document.x.address.value;
+        var session=document.x.session.value;
+        var gender="";
+        var subject=[];
+    }
+    for( let i=0; i<document.x.gend.length;i++){
+        if(document.x.gen[i].checked){
+            gender=document.x.gen[i].value;
+        }
+    }
+    for(let j=0; j<document.x.sub.length;j++){
+        if(document.x.sub[j].checked){
+            subjects.push(document.x.sub[j].value);
+        }
+    }
+   </script>
 </body>
 </html>

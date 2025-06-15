@@ -20,7 +20,7 @@ function f_window() {
         }
     }
 
-    let popup = window.open("", "popupWindow", "width=400,height=400,left=300,top=200,resizable=yes");
+    let popup = open("", "popupWindow", "width=400,height=400,left=300,top=200,resizable=yes");
 
     with (popup.document) {
         write("<html><head><title>" + title + "</title></head>");
