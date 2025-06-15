@@ -4,12 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+   <style>
+   div{
+    background-color: rgba(255, 248, 220, 0.815);
+    width: 500px;
+    height: 410px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+   }
+   </style>
 </head>
 <body>
    <div>
-    <fieldset>
-        <legend></legend>
+   <form action="#" name="x">
+     <fieldset>
+        <legend style="font-size: medium; text-align: center; font-weight: bolder;color: mediumblue;">Registration Form</legend>
+        Name: <br>
+        <input type="text" name="cname" id="cname" onblur="chname()">
+        <span id="mailmsg" class="d-inline-block" ></span>
+        <br><br>
+        Email: <br>
+        <input type="email" name="email" id="email" onblur="chmail()">
+        <span id="mailmsg" class="d-inline-block"></span>
+        <br><br>
+        Contact:  <br>
+        <input type="number" name="contact">
+        <br><br>
+        Address: <br>
+        <textarea name="address" id="address"></textarea>
+        <br><br>
+        Session: &nbsp;
+        <select name="session">
+            <option value="21-22">21-22</option>
+            <option value="22-23">22-23</option>
+            <option value="23-24">23-24</option>
+            <option value="24-25">24-25</option>
+        </select>
+        <br><br>
+        Gender:
+        <input type="radio" name="gend" value="male">Male
+        <input type="radio" name="gend" value="female">female
+        <input type="radio" name="gend" value="others">Others
+        <br><br>
+        Subject:
+        <input type="checkbox" name="sub" value="Bengali">Bengali
+        <input type="checkbox" name="sub" value="English">English
+        <input type="checkbox" name="sub" value="Bengali">Urdu
+        <br><br>
+        <input type="button" value="submit" onclick="x_window()" style="background-color: peru; font-weight: bold; color: black; border-radius: 5px;">
+
+       
+
+
     </fieldset>
+   </form>
    </div> 
 </body>
 </html>
