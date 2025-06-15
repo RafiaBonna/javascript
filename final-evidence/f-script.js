@@ -9,7 +9,7 @@ function f_window() {
     var subjects = [];
 
     for (let i = 0; i < document.f.gen.length; i++) {
-        if (document.f.gen[i].checked) {
+        if (document.f.gend[i].checked) {
             gender = document.f.gen[i].value;
         }
     }
@@ -25,7 +25,7 @@ function f_window() {
     with (popup.document) {
         write("<html><head><title>" + title + "</title></head>");
         write("<body style='background-color:blue; font-weight: bold'>");
-        write("<div style='border:1px solid gray; padding:10px; background-color:lightblue; width:300px; height:300px; margin:20px auto;'>");
+        write("<div style='border:1px solid gray; padding:10px; background-color:lightblue; width:300px; height:300px; margin:20px auto;>'");
         write("Name: " + name + "<br/>"+ "<br/>");
         write("Email: " + email + "<br/>"+ "<br/>");
         write("Contact: " + contact + "<br/>"+ "<br/>");
