@@ -67,7 +67,7 @@
         var session=document.x.session.value;
         var gender="";
         var subject=[];
-    }
+    
     for( let i=0; i<document.x.gend.length;i++){
         if(document.x.gen[i].checked){
             gender=document.x.gen[i].value;
@@ -75,10 +75,31 @@
     }
     for(let j=0; j<document.x.sub.length;j++){
         if(document.x.sub[j].checked){
-            subjects.push(document.x.sub[j].value);
+            subject.push(document.x.sub[j].value);
         }
     }
     let door =open("","","width=400,height=400,left=300,top=200,resizeable=yes");
+    with(door.document){
+        write("<html><head><title>"+title+"</title></head>");
+        write("<body style='background-color:lavender;font-weight:bold'>");
+        write("<div style='border:1px solid black;padding:10px;background-color:skyblue;width:300px;height:300px;margin:20px auto;'>");
+        write("Name :"+name+"<br/>"+"<br/>");    
+        write("Email :"+email +"<br/>"+"<br/>");    
+        write("Contact :"+contact+"<br/>"+"<br/>");    
+        write("Address :"+address+"<br/>"+"<br/>"); 
+        write("Session :"+session +"<br/>"+"<br/>");    
+        write("Session :"+session +"<br/>"+"<br/>");    
+        write("Subjects :"+subject.join(",") +"<br/>"+"<br/>");
+        write("<br/> <input type='button' value='close me' onclick='self.close();'/>"+"&nbsp");
+        write("<input type='button' value='print' onclick='self.print();'/>");
+        write("</div></body></html>");
+        close();
+        
+
+
+          
+    }
+}
    </script>
 </body>
 </html>
