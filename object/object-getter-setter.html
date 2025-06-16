@@ -7,7 +7,7 @@
 </head>
 <body>
   <h3>Getter-setter-Object</h3> 
-  <!-- <script>
+  <script>
     const client ={
         firstName:"Alam",
         lastName:[],
@@ -22,7 +22,7 @@
     client.setData("Alam");
     client.getShow();
 //   </script> 
-//   <script>
+   <script>
       const person ={
         firstName:[],
         lastName:"Alam",
@@ -40,16 +40,34 @@
 
     person.getShow();
 
+  </script>
+   <!-- for loop statement array
+  <script>
+// let plane =['rafia','mafia','safia','nafia'];
+// plane.push('kafia');
+// plane.push('uafia');
+// plane.push('zafia');
+
+// for(let i =0; i <plane.length; i++){
+//     console.log(plane[i]);
+// }
+
   </script> -->
   <script>
-let plane =['rafia','mafia','safia','nafia'];
-plane.push('kafia');
-plane.push('uafia');
-plane.push('zafia');
-
-for(let i =0; i <plane.length; i++){
-    console.log(plane[i]);
-}
+        const customer ={
+        firstName:"Alam",
+        lastName:[],
+        id:28,
+        getShow: function(){
+            console.log(this.firstName+" " +this.lastName);
+            document.write(customer.firstName+" " +customer.lastName);
+        },
+          setData: function(m){
+            this.lastName.push(m);
+          },
+    };
+    customer.setData("Ansari");
+    customer.getShow();
   </script>
 </body>
 </html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>synchronous</title>
+</head>
+<body>
+    <!-- Synchronous Function -->
+     <!-- Best for quick ,simple tasks(e.g,basic calculations,UI updates). -->
+      <script>
+        console.log("hello");
+        function lengthyTask(){
+            for(let i=0;i<8900000000;i++){}
+    console.log("Step 3: second task is complete");
+        }
+        console.log("step 1: Begining");
+        lengthyTask();
+        console.log("step 2: End");
+      </script>
+</body>
+</html>
