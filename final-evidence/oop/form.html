@@ -4,11 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        div{
+            background-color:rgba(165, 235, 180, 0.473);
+            width: 500px;
+            height: 425px;
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            color:rgb(25, 9, 99);
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
-    
-    <script>
-
-    </script>
+  <div>
+    <form id="form1">
+        <fieldset>
+            <legend style="font-size: large; text-align:  center; font-style: italic; font-weight: bolder; color: rgb(25, 9, 99);">Registration Form</legend>
+       Name: <br>
+       <input type="text" name="cname" id="cname"> <br> <br>
+       Email: <br>
+         <input type="text" name="email" id="email"> <br> <br>
+       Contact: <br>
+       <input type="number" name="cont" value="cont">  <br> <br>
+       Address: <br>
+       <textarea name="address" value="dress"></textarea>  <br> <br>
+       Session: &nbsp;
+       <select name="session">
+        <option value="2021-2022">2021-2022</option>
+        <option value="2022-2023">2022-2023</option>
+        <option value="2023-2024">2023-2024</option>
+       </select> <br> <br>
+       Gender: 
+       <input type="radio" name="gend" value="male">Male
+       <input type="radio" name="gend" value="Female">Female
+       <input type="radio" name="gend" value="male">Others
+       <br><br>
+       Subject:
+       <input type="checkbox" name="sub" value="English">English
+       <input type="checkbox" name="sub" value="Bangla">Bangla
+       <input type="checkbox" name="sub" value="Arabic">Arabic
+       <br><br>
+       <input type="submit" value="submit" style="width: 58px;border-radius: 5px;font-weight: bold; background-color:white; color:rgb(25, 9, 99);">
+        </fieldset>
+    </form>
+  </div>
+  <script>
+    class FormValues{
+        constructor(formData){
+            for(let [name,value] of formData){
+                this[name]=formData.getAll(name).join(',');
+            }
+        }
+        getData(){
+            var result="Name:"+this.cname+"<br>";
+                result+="Email:"+this.email+"<br>";
+                result+="Contact:"+this.cont+"<br>";
+                result+="Address:"+this.address+"<br>";
+                result+="Session:"+this.session+"<br>";
+                result+="Gender:"+this.gend+"<br>";
+                result+="Subject:"+this.sub+"<br>";
+                var win=window.open('','','width=400,height=400');
+                win.document.write(result);
+        }
+    }
+    form1.onsubmit=async(e)=>{
+        e.preventDefault();
+        var mb=document.querySelector('#form1');
+        var data= new FormData(mb);
+        var r=new FormValues(data);
+        r.getData();
+    }
+  </script>  
 </body>
 </html>
