@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: lavenderblush;
+            width: 320px;
+            height: 370px;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight:bolder;
+
+        }
+    </style>
+</head>
+<body>
+   <div>
+    <form id="form1">
+        <fieldset>
+            <legend style="text-align: center; font-weight: bolder; font-size: larger; color: black;"> Registration Form</legend>
+            Name: <br>
+            <input type="text" name="n" id="n"> <br> <br>
+            Email: <br>
+            <input type="text" name="m" id="m"> <br> <br>
+            Address: <br>
+            <textarea name="ad" value="add"></textarea> <br> <br>
+            Gender:
+            <input type="radio" name="gen" value="Male"> Male
+            <input type="radio" name="gen" value="Female"> Female
+             <br> <br>
+             Session:&nbsp;
+             <select name="ion">
+                <option value="20-21">20-21</option> <br> <br>
+                <option value="22-23">22-22</option><br> <br>
+                <option value="23-24">23-24</option><br> <br>
+             </select>
+             <br> <br>
+             Course: &nbsp;
+             <input type="checkbox" name="cor" value="HTML">HTML 
+             <input type="checkbox" name="cor" value="CSS">CSS
+             <input type="checkbox" name="cor" value="PHP">PHP
+              <br> <br>
+              <input type="reset" value="Reset" style="width: 55px; background-color: gainsboro;"> &nbsp;
+              <input type="submit" value="Submit" style="width: 55px; background-color: gainsboro;">
+        </fieldset>
+    </form>
+   </div> 
+   <script>
+    var ab=document.querySelector('#form1');
+    form1.onsubmit=async(e)=>{
+        e.preventDefault();
+       var data = new FormData(ab);
+       var ra = new FormValues(data);
+       ra.getData(); 
+    }
+    class FormValues{
+        constructor(formData){
+            for(let [name,value]of formData){
+                this[name] =formData.getAll(name).join(',');
+            }
+        }
+        getData(){
+            var result ="Name :"+this.n+"<br>";
+             result+="Email :"+this.m+"<br>";
+             result+="Address :"+this.add+"<br>";
+             result+="Gender :"+this.gen+"<br>";
+             result+="Session :"+this.ion+"<br>";
+             result+="Course :"+this.cor+"<br>";
+             var win=window.open('','','width=400,height=400');
+             win.document.write(result);
+        }
+    }
+   </script>
+</body>
+</html>
